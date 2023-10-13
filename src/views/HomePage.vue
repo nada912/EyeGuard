@@ -1,30 +1,16 @@
 <template>
     <div>
         <h1 class="text-center my-5">EyeGuard: Early Cancer Detection for Brighter Tomorrows</h1>
-        <b-carousel
-            id="carousel-1"
-            :interval="4000"
-            controls
-            indicators
-            background="#ababab"
-            img-width="1024"
-            img-height="480"
-            style="text-shadow: 1px 1px 2px #333;"
-        >
-            <b-carousel-slide
-                v-for="(slide, i) in slides"
-                :key="i"
-                :caption="slide.caption"
-                :img-src="slide.img"
-                :text="slide.text"
-            ></b-carousel-slide>
-        </b-carousel>
     </div>
 </template>
 
 <script>
+import CarouselComponent from "../components/CarouselComp.vue";
 export default {
     name: "HomePage",
+    components: {
+        CarouselComponent
+    },
     data() {
         return {
             slides: [
