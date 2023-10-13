@@ -1,7 +1,11 @@
 <template>
     <div class="about-us">
         <h1>About Us</h1>
-        <p>We are a team of passionate developers who love creating innovative solutions to real-world problems. Our mission is to make the world a better place through technology.</p>
+        <p>We are a team of passionate developers who love creating innovative solutions to real-world problems. Our mission is to make the world a better place through technology.
+        The EyeGuard project is a Cancer Detection project aims to develop a web-based application that allows users to
+        upload images of eyes for cancer detection. The system utilizes machine learning models to
+        analyze uploaded images and provide a likelihood score indicating the presence of cancer. 
+        </p>
         <h2>Our Team</h2>
         <ul>
             <li v-for="(member, index) in team" :key="index">{{ member.name }} - {{ member.role }}</li>
@@ -14,10 +18,9 @@ export default {
     data() {
         return {
             team: [
-                { name: 'John Doe', role: 'Lead Developer' },
-                { name: 'Jane Smith', role: 'UI/UX Designer' },
-                { name: 'Bob Johnson', role: 'Backend Developer' },
-                { name: 'Sara Lee', role: 'Frontend Developer' }
+                { name: 'Nada NADIRE', role: 'Frontend & Backend Developer', image: require('@/assets/girl.png')},
+                { name: 'Hamza HORD', role: 'Backend Developer', image: require('@/assets/boy.png') },
+                { name: 'Yann Zeutsop', role: 'UI/UX Designer', image: require('@/assets/boy.png') },
             ]
         }
     }
