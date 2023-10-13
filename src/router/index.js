@@ -1,17 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import HomePage from '../views/HomePage.vue'
 import Confidentiality from '../views/Confidentiality.vue'
 import About from '../views/AboutUs.vue'
 import CheckCancer from '../views/CheckCancer.vue'
-
-Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
+        component: HomePage
     },
     {
         path: '/confidentiality',
@@ -34,9 +31,8 @@ const routes = [
     }
 ]
 
-const router = new VueRouter({
-    mode: 'history',
-    base: process.env.BASE_URL,
+const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
     routes,
     scrollBehavior(to, from, savedPosition) {
         if (savedPosition) {

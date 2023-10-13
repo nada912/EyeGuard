@@ -4,7 +4,7 @@
         <p>We are a team of passionate developers who love creating innovative solutions to real-world problems. Our mission is to make the world a better place through technology.</p>
         <h2>Our Team</h2>
         <ul>
-            <li v-for="member in team">{{ member.name }} - {{ member.role }}</li>
+            <li v-for="(member, index) in team" :key="index">{{ member.name }} - {{ member.role }}</li>
         </ul>
     </div>
 </template>
