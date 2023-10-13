@@ -22,7 +22,7 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'FooterComponent'
 }
 </script>
 
