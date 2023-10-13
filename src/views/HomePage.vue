@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1 class="text-center my-5">EyeGuard: Early Cancer Detection for Brighter Tomorrows</h1>
+        <carousel-component :slides="slides" />
     </div>
 </template>
 
