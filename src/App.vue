@@ -1,7 +1,5 @@
 <template>
-  <!--
   <img alt="Vue logo" src="./assets/logo.png">
-  -->
   <div id="app">
     <NavbarComponent />
     <router-view />
