@@ -1,11 +1,17 @@
-module.exports = {
-    purge: [],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-      extend: {},
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
-  }
+export default {
+        purge: [
+                './src/**/*.html',
+                './src/**/*.vue',
+                './src/**/*.jsx',
+                './src/**/*.js',
+        ],
+        darkMode: media, // or 'false' or 'class'
+        theme: {
+            extend: {},
+        },
+        variants: {
+            extend: {},
+        },
+        plugins: [],
+}
+    
