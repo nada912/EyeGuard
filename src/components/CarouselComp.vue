@@ -15,9 +15,10 @@
     data() {
       return {
         items: [
-          { image: "" },
-          { image: "" },
-          { image: "" },
+          { image: "", caption: "Slide 1" , text:"" },
+          { image: "", caption: "Slide 2" , text:"" },
+          { image: "", caption: "Slide 3" , text:"" },
+          { image: "", caption: "Slide 4" , text:"" },
         ],
       };
     },
