@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="bg-gray-100">
         <div class="logo">
             <img src="path/to/logo.png" alt="Logo">
             <h1>{{ title }}</h1>
