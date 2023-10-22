@@ -21,7 +21,7 @@ const routes = [
         component: CheckCancer
     },
     {
-        path: '/about',
+        path: '/about-us',
         name: 'About',
         component: About
     }

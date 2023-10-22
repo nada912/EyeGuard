@@ -30,7 +30,7 @@ export default {
                 { id: 3, name: 'Yann Zeutsop', role: 'UI/UX Designer', image: require('@/assets/boy.png') },
             ],
         };
-    },
+    }
 };
 </script>
 
@@ -47,7 +47,7 @@ section {
 }
 
 h1, h2 {
-    color: #007BFF;
+    color: rgb(49, 141, 98);
 }
 
 h1 {
