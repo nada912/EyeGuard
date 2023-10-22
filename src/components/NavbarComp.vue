@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <div class="container mx-auto flex justify-between items-center">
       <div class="logo">
         <img src="../assets/logo.png" alt="Logo" class="w-12 h-12" />
