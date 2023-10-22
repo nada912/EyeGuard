@@ -1,15 +1,13 @@
 <template>
-    <footer class="footer">
-        <div class="container">
-            <ul class="footer-links">
-                <li><router-link to="/about-us">About Us</router-link></li>
-                <li><router-link to="/confidentiality">Privacy Policy</router-link></li>
-
-            </ul>
-        </div>
+    <footer class="footer bg-green-500 text-white py-4">
+      <div class="container mx-auto flex justify-center">
+        <ul class="footer-links flex space-x-4">
+          <li><router-link to="/about-us">About Us</router-link></li>
+          <li><router-link to="/confidentiality">Privacy Policy</router-link></li>
+        </ul>
+      </div>
     </footer>
-
-</template>
+  </template>
 
 <script>
 export default {

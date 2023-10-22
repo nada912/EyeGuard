@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class="carousel  flex items-center justify-center">
     <div v-for="(slide, index) in slides" :key="index">
       <Slide v-if="currentSlide === index" @slideClick="nextSlide">
         <img :src="slide.image" />

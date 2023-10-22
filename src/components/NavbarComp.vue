@@ -1,14 +1,14 @@
 <template>
-  <nav class="navbar">
-    <div class="container">
-      <div class="nav-content">
-        <img class="logo" src="../assets/logo.png" alt="Logo" />
-        <span class="EyeGuardT">{{ Title }}</span>
-        <ul class="nav-links">
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/check-cancer">Check Cancer</router-link></li>
-        </ul>
+  <nav>
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="Logo" class="w-12 h-12" />
       </div>
+      <div class="EyeGuardT">EyeGuard</div>
+      <ul class="nav-links flex space-x-4">
+        <li><router-link to="/" class="text-white">Home</router-link></li>
+        <li><router-link to="/check-cancer" class="text-white">Check Cancer</router-link></li>
+      </ul>
     </div>
   </nav>
 </template>
