@@ -1,42 +1,63 @@
 <template>
-    <div class="carousel-container">
-      <carousel>
-        <slide v-for="(item, index) in items" :key="index">
-          <div class="carousel-item">
-            <img :src="item.image" alt="Carousel Image">
-          </div>
-        </slide>
-      </carousel>
+  <div class="carousel">
+    <div v-for="(slide, index) in slides" :key="index">
+      <Slide v-if="currentSlide === index" @slideClick="nextSlide">
+        <img :src="slide.image" />
+        <h3>{{ slide.title }}</h3>
+        <p>{{ slide.description }}</p>
+      </Slide>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        items: [
-          { image: "", caption: "Slide 1" , text:"" },
-          { image: "", caption: "Slide 2" , text:"" },
-          { image: "", caption: "Slide 3" , text:"" },
-          { image: "", caption: "Slide 4" , text:"" },
-        ],
-      };
+  </div>
+</template>
+
+
+<script>
+import Slide from './Slide';
+
+export default {
+  components: { Slide },
+  name: 'CarouselComponent',
+  props: {
+    slides: Array,
+    interval: {
+      type: Number,
+      default: 3500
+    }
+  },
+  data() {
+    return {
+      currentSlide: 0
+    };
+  },
+  mounted() {
+    setInterval(() => {
+      this.nextSlide();
+    }, this.interval);
+  },
+  methods: {
+    nextSlide() {
+      if (this.currentSlide < this.slides.length - 1) {
+        this.currentSlide++;
+      } else {
+        this.currentSlide = 0;
+      }
     },
-  };
-  </script>
-  
+  },
+};
+</script>
 
-<style>
-    .carousel-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
+<style scoped>
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
 
-    .carousel-item img {
-        max-width: 100%;
-        height: auto;
-    }
-        
+.carousel img {
+  max-height: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 </style>
-
-  
