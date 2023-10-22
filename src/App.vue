@@ -61,4 +61,29 @@ footer {
     --smaller-font-size: 0.813rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media queries for responsiveness */
+/* For small devices */
+@media screen and (max-width: 320px) {
+
+}
+
+@media screen and (min-width: 435px) {
+
+}
+
+/*For medium devices*/
+@media screen and (min-width: 630px) {
+
+}
+
+/*For large devices*/
+@media screen and (min-width: 992px) {
+
+
+} 
 </style>
