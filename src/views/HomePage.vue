@@ -1,8 +1,8 @@
 <template>
   <div class="slogan-container">
-    <div class="slogan">
-      <h1>Early Cancer Detection</h1>
-      <h2>for Brighter Tomorrows</h2>
+    <div class="slogan w-full sm:w-1/2 text-center p-5 sm:p-10">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl text-green-500">Early Cancer Detection</h1>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl">for Brighter Tomorrows</h2>
     </div>
   </div>  
   <div class="container">
