@@ -1,69 +1,70 @@
 <template>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <img class="logo" src="../assets/logo.png" alt="Logo" />
-                <span class="EyeGuardT">{{ Title }}</span>
-                <ul class="nav-links">
-                    <li><router-link to="/">Home</router-link></li>
-                    <li><router-link to="/check-cancer">Check Cancer</router-link></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <img class="logo" src="../assets/logo.png" alt="Logo" />
+        <span class="EyeGuardT">{{ Title }}</span>
+        <ul class="nav-links">
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/check-cancer">Check Cancer</router-link></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
 export default {
-    name: 'NavbarComponent',
-    data() {
+  name: 'NavbarComponent',
+  data() {
     return {
-      Title : 'EyeGuard'
+      Title: 'EyeGuard',
     };
   },
-}
+};
 </script>
 
 <style scoped>
 .navbar {
   position: sticky;
-  top: 0;
   z-index: 100;
   width: 100%;
-  background-color: white;
+  background-color:none;
   padding: 10px;
-  align-items: center;
+  display: flex;
+  align-items: flex-start; 
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;  
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center the content vertically */
 }
 
 .logo {
   width: 5%;
-  align-self: left;
   margin-left: 1%;
   margin-bottom: 0%;
 }
 
 .EyeGuardT {
-    font-size: 40px;
-    font-weight: bold;
-    margin-left: 16%;
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 53%;
+  color: rgb(49, 141, 98);
 }
 
 .nav-links {
   display: flex;
   list-style-type: none;
-  margin-right: 8%;
+  margin-left: 11%;
 }
 
 .nav-links li {
@@ -76,6 +77,6 @@ export default {
 }
 
 .nav-links a:hover {
-  color: rgb(49, 141, 98); 
+  color: rgb(49, 141, 98);
 }
 </style>
