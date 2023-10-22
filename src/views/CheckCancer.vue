@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h1>Check for Eye Cancer</h1>
-        <input type="file" @change="onFileChange">
-        <button @click="analyzeImage">Analyze Image</button>
-        <div v-if="result">
-            <h2>Result:</h2>
-            <p>{{ result }}</p>
+        <h1 class="check-title">Check for Eye Cancer</h1>
+        <input type="file" @change="onFileChange" class="file-input">
+        <button @click="analyzeImage" class="analyze-button">Analyze Image</button>
+        <div v-if="result" class="result-container">
+            <h2 class="result-title">Result:</h2>
+            <p class="result-text">{{ result }}</p>
         </div>
     </div>
 </template>
@@ -39,3 +39,43 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.check-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.file-input {
+    margin-bottom: 10px;
+}
+
+.analyze-button {
+    background-color:rgb(49, 141, 98);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.analyze-button:hover {
+    background-color: rgb(19, 105, 65);
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.result-text {
+    font-size: 16px;
+    color: #555;
+}
+</style>

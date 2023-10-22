@@ -26,7 +26,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures that the container stretches to at least the full viewport height. */
 }
 
 nav {
@@ -40,5 +42,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+/* Add a margin-top to push the footer to the bottom of the viewport */
+footer {
+  margin-top: auto;
 }
 </style>
