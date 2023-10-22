@@ -1,9 +1,7 @@
 <template>
-    <header class="bg-gray-100">
-        <div class="logo">
-            <img src="./assets/logo.png" alt="Logo">
-            <h1>{{ title }}</h1>
-        </div>
+    <header>
+        <h1>{{ title }}</h1>
+        <img :src="logoSrc" alt="Logo">
     </header>
 </template>
 
@@ -18,37 +16,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 50px;
-    margin-right: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin-right: 1rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+h1 {
+    margin-right: 10px;
 }
 </style>
