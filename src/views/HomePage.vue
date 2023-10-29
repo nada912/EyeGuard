@@ -123,7 +123,6 @@
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   position: relative;
-  /*background-image: url('../assets/eye.png'); */
 }
 
 .slogan {
@@ -148,6 +147,7 @@ h1, h2 {
   margin-right: 0%;
   margin-left: 5%;
 }
+
 .container {
   margin: 0% 0% 1% 0%;
   padding: 0% 0% 0% 0%;
@@ -195,11 +195,6 @@ h1, h2 {
   width: 100%;
   height: 300px;
   object-fit: cover;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-between;
 }
 
 .responsive-card {
