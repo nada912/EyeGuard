@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container mx-auto flex justify-between items-center">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logo" class="w-12 h-12" />
+        <img src="../assets/nv_logo.png" alt="Logo" class="w-12 h-12" />
       </div>
       <div class="EyeGuardT">EyeGuard</div>
       <ul class="nav-links flex space-x-4">

@@ -80,7 +80,7 @@
           },
           {
             id: 2,
-            thumbnail: require('@/assets/logo.png'),
+            thumbnail: require('@/assets/girl.png'),
             title: 'Logo',
             date: '06 décembre 2022',
           },
