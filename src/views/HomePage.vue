@@ -61,7 +61,7 @@
         currentSlide: 0, // Index of the current slide
         slides: [
           {
-            image: require('@/assets/girl.png'),
+            image: require('@/assets/Retinoblastoma.jpg'),
             title: 'Girl\'s picture',
             description: 'Picture of a girl',
           },
@@ -74,21 +74,21 @@
         events: [
           {
             id: 1,
-            thumbnail: require('@/assets/girl.png'),
-            title: 'Girl',
-            date: '17 décembre 2022',
+            thumbnail: require('@/assets/1.png'),
+            title: 'Eye image uploaded by a user',
+            date: "October 17, 2023",
           },
           {
             id: 2,
-            thumbnail: require('@/assets/girl.png'),
-            title: 'Logo',
-            date: '06 décembre 2022',
+            thumbnail: require('@/assets/processed1.png'),
+            title: 'Eye image processed by our system',
+            date: 'October 17, 2023',
           },
           {
             id: 3,
-            thumbnail: require('@/assets/boy.png'),
-            title: 'Boy',
-            date: '18 décembre 2022',
+            thumbnail: require('@/assets/result.jpeg'),
+            title: 'Result of the analysis with a likelihood score',
+            date: 'October 17, 2023',
           },
 
         ],
@@ -181,7 +181,7 @@ h1, h2 {
 
 .event-card img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
