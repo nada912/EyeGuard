@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
@@ -23,9 +25,21 @@ export default {
             this.image = event.target.files[0]
         },
         async analyzeImage() {
-            const formData = new FormData()
-            formData.append('image', this.image)
+            const formData = new FormData();
+            formData.append('image', this.image);
             try {
+                const response = await axios.post("http://localhost:5000/getresults/", formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+                this.result = response.data;
+                console.log(this.result);
+            } catch (error) {
+                console.log(error);
+            }
+        
+            /*try {
                 const response = await fetch('/api/analyze-image', {
                     method: 'POST',
                     body: formData
@@ -34,7 +48,7 @@ export default {
                 this.result = data.result
             } catch (error) {
                 console.error(error)
-            }
+            }*/
         }
     }
 }
