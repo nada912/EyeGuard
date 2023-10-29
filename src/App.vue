@@ -32,7 +32,7 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  padding: 0px;
 }
 
 nav a {
@@ -42,6 +42,10 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+header {
+  margin: 0%;
 }
 
 /* Add a margin-top to push the footer to the bottom of the viewport */
