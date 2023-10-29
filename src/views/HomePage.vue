@@ -144,8 +144,6 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 0%;
-  margin-left: 5%;
 }
 
 .container {
