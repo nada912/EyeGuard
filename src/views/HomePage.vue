@@ -61,14 +61,14 @@
         currentSlide: 0, // Index of the current slide
         slides: [
           {
-            image: require('@/assets/blue-eye.jpg'),
-            title: 'Girl\'s picture',
-            description: 'Picture of a girl',
+            image: require('@/assets/green-eye.jpeg'),
+            title: '',
+            description: '',
           },
           {
             image: require('@/assets/blue-eye.jpg'),
-            title: 'Boy\'s picture',
-            description: 'Picture of a boy',
+            title: '',
+            description: '',
         },
         ],
         events: [
@@ -172,6 +172,7 @@ h1, h2 {
 .info-card {
   margin: 30px;
   padding: 1rem;
+  margin-left: 7%;
 }
 
 .card-container {
@@ -179,7 +180,7 @@ h1, h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 5px;
-
+  margin-left: 5%;
 }
 
 .event-card {
