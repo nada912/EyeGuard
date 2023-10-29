@@ -4,7 +4,7 @@
       <div class="logo">
         <img src="../assets/nv_logo.png" alt="Logo" class="w-12 h-12" />
       </div>
-      <div class="EyeGuardT">EyeGuard</div>
+      <div class="EyeGuardT">{{ Title }}</div>
       <ul class="nav-links flex space-x-4">
         <li><router-link to="/" class="text-white">Home</router-link></li>
         <li><router-link to="/check-cancer" class="text-white">Check Cancer</router-link></li>
@@ -28,7 +28,7 @@ export default {
 .navbar {
   position: sticky;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
   background-color:none;
   padding: 10px;
   margin: 0% 0% 0% 0%;
@@ -50,22 +50,23 @@ export default {
 }
 
 .logo {
-  width: 5%;
-  margin-left: 1%;
+  width: 40%;
+  margin-left: 0%;
   margin-bottom: 0%;
 }
 
 .EyeGuardT {
   font-size: 40px;
   font-weight: bold;
-  margin-right: 53%;
+  margin-right: 25%;
   color: rgb(49, 141, 98);
+  margin-left: 0%;
 }
 
 .nav-links {
   display: flex;
   list-style-type: none;
-  margin-left: 11%;
+  margin-left: 1%;
 }
 
 .nav-links li {
