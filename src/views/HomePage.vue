@@ -119,7 +119,7 @@
 .slogan-container {
   display: flex;
   align-items: center;
-  height: 175px; 
+  height: 160px; 
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   position: relative;
