@@ -9,7 +9,7 @@
     <div class="content">
       <Carousel :slides="slides" @nextSlide="nextSlide()" @previousSlide="previousSlide()">
         <template v-for="(slide, index) in slides" :key="index">
-          <Slide v-if="currentSlide === index">
+          <Slide v-if="currentSlide === index" class="carousel">
             <img :src="slide.image" class="w-screen-full h-auto" />
             <h3>{{ slide.title }}</h3>
             <p>{{ slide.description }}</p>
@@ -120,8 +120,8 @@
   display: flex;
   align-items: center;
   height: 150px; 
-  margin: 0;
-  padding: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
   position: relative;
   /*background-image: url('../assets/eye.png'); */
 }
@@ -136,7 +136,17 @@
 h1, h2 {
   font-size: 2rem; 
   color:  rgb(49, 141, 98);
-  margin: 0;
+  margin: 0 0 0 0;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0%;
+  margin-left: 5%;
 }
 .container {
   margin: 0% 0% 1% 0%;
@@ -160,7 +170,7 @@ h1, h2 {
 }
 
 .info-card {
-  margin: 20px;
+  margin: 30px;
   padding: 1rem;
 }
 

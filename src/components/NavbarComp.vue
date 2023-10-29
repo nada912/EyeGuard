@@ -31,6 +31,7 @@ export default {
   width: 100%;
   background-color:none;
   padding: 10px;
+  margin: 0% 0% 0% 0%;
   display: flex;
   align-items: flex-start; 
   justify-content: space-between;
