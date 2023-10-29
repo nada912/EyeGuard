@@ -10,7 +10,7 @@
       <Carousel :slides="slides" @nextSlide="nextSlide()" @previousSlide="previousSlide()">
         <template v-for="(slide, index) in slides" :key="index">
           <Slide v-if="currentSlide === index">
-            <img :src="slide.image" class="w-screen h-auto" />
+            <img :src="slide.image" class="w-screen-full h-auto" />
             <h3>{{ slide.title }}</h3>
             <p>{{ slide.description }}</p>
           </Slide>
@@ -139,7 +139,8 @@ h1, h2 {
   margin: 0;
 }
 .container {
-  margin: 20px;
+  margin: 0% 0% 1% 0%;
+  padding: 0% 0% 0% 0%;
 }
 
 .content {
@@ -188,11 +189,6 @@ h1, h2 {
 .button-container {
   display: flex;
   justify-content: space-between;
-}
-
-Slide img {
-  width: 100%; /* Les images prennent 100% de la largeur du conteneur Slide */
-  height: auto; /* Laisse la hauteur ajustée automatiquement en proportion de la largeur */
 }
 
 .responsive-card {
