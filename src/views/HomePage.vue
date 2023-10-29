@@ -119,7 +119,7 @@
 .slogan-container {
   display: flex;
   align-items: center;
-  height: 180px; 
+  height: 175px; 
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   position: relative;
@@ -130,6 +130,7 @@
   text-align: center;
   padding: 10px;
   margin-left: 25%;
+  margin-bottom: 1%;
 }
 
 h1, h2 {
