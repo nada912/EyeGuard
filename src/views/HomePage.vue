@@ -149,7 +149,8 @@ h1, h2 {
 }
 
 .container {
-  margin: 0% 0% 1% 0%;
+  margin: 0 auto;
+  margin-bottom: 1%;
   padding: 0% 0% 0% 0%;
   width: 100vw;
 }
