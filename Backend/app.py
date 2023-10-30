@@ -9,6 +9,8 @@ import requests
 import json
 from flask import request
 from flask_cors import CORS
+import h5py
+
 
 """ blob token : 
 sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D
@@ -74,9 +76,19 @@ def processing(image):
 
     return output_image
 
+
+def load_model_from_url(model_url):
+    # download model from url
+    response = requests.get(model_url)
+    with open("model.h5", "wb") as model_file:
+        model_file.write(response.content)
+
+
 def predict(data):
     #url to model stored in azure blob storage
-    model = load_model("https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D")
+    model_url = "https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D"
+    load_model_from_url(model_url)
+    model = keras.models.load_model("model.h5")
     image = processing(data)
     predictions = model.predict(image)
     predicted_labels = (predictions > 0.5).astype(int)
