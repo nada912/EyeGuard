@@ -7,6 +7,9 @@
             <h2 class="result-title">Result:</h2>
             <p class="result-text">{{ result }}</p>
         </div>
+        <div v-if="isLoading">
+            <h2>Loading result...</h2>
+        </div>
     </div>
 </template>
 
@@ -17,7 +20,8 @@ export default {
     data() {
         return {
             image: null,
-            result: null
+            result: null,
+            isLoading: false
         }
     },
     methods: {
@@ -25,6 +29,7 @@ export default {
             this.image = event.target.files[0]
         },
         async analyzeImage() {
+            this.isLoading = true; 
             const formData = new FormData();
             formData.append('image', this.image);
             try {
@@ -38,6 +43,7 @@ export default {
             } catch (error) {
                 console.log(error);
             }
+            this.isLoading = false; 
         }
     }
 }
