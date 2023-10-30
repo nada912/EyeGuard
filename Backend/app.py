@@ -47,8 +47,6 @@ def getimageandsendpreds():
     return results_json, 200, {'Content-Type': 'application/json'}
 
 
-
-
 def processing(image):
     target_size = 224
 
@@ -80,11 +78,13 @@ def load_model_from_url(model_url):
         model_file.write(response.content)
 
 
+# url to model stored in azure blob storage
+# available until november 4th 2023
+model_url = "https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=ra&st=2023-10-30T14:38:12Z&se=2023-11-04T22:38:12Z&sv=2022-11-02&sr=b&sig=D58asX3FDwNNVRSWLoo7DLlH9kQFRpoD8L7JJEZN598%3D"
+load_model_from_url(model_url)
+
+
 def predict(data):
-    # url to model stored in azure blob storage
-    # available until november 4th 2023
-    model_url = "https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=ra&st=2023-10-30T14:38:12Z&se=2023-11-04T22:38:12Z&sv=2022-11-02&sr=b&sig=D58asX3FDwNNVRSWLoo7DLlH9kQFRpoD8L7JJEZN598%3D"
-    load_model_from_url(model_url)
     model = keras.models.load_model("model.h5")
     image = processing(data)
     predictions = model.predict(image)
