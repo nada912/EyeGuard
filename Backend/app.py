@@ -10,6 +10,9 @@ import json
 from flask import request
 from flask_cors import CORS
 
+""" blob token : 
+sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D
+"""
 
 app = Flask(__name__)
 
@@ -72,7 +75,8 @@ def processing(image):
     return output_image
 
 def predict(data):
-    model = load_model("datacamp_model.h5")
+    #url to model stored in azure blob storage
+    model = load_model("https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D")
     image = processing(data)
     predictions = model.predict(image)
     predicted_labels = (predictions > 0.5).astype(int)
