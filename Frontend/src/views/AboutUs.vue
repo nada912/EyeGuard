@@ -25,7 +25,7 @@ export default {
     data() {
         return {
             teamMembers: [
-                { id: 1, name: 'Nada NADIRE', role: 'Frontend Developer', image: require('@/assets/girl.png')},
+                { id: 1, name: 'Nada NADIRE', role: 'Frontend & Azure Developer', image: require('@/assets/girl.png')},
                 { id: 2, name: 'Hamza HORD', role: 'Backend Developer', image: require('@/assets/boy.png') },
                 { id: 3, name: 'Yann Zeutsop', role: 'UI/UX Designer', image: require('@/assets/boy.png') },
             ],
