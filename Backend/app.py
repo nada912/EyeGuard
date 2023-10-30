@@ -12,10 +12,6 @@ from flask_cors import CORS
 import h5py
 
 
-""" blob token : 
-sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D
-"""
-
 app = Flask(__name__)
 
 CORS(app, ressources = {r"/*":{'origins' : 'http://http://localhost:8081', "allow_headers" : "Acces-Control-Allow-Origin"}})
@@ -85,8 +81,9 @@ def load_model_from_url(model_url):
 
 
 def predict(data):
-    #url to model stored in azure blob storage
-    model_url = "https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=r&st=2023-10-30T01:35:12Z&se=2023-11-04T09:35:12Z&sip=127.0.0.1-192.168.43.29&spr=https&sv=2022-11-02&sr=b&sig=JfKQojhV0QwJNzNnX0cwzv0QJT%2B%2BmXh%2FPUR1LVX643U%3D"
+    # url to model stored in azure blob storage
+    # available until november 4th 2023
+    model_url = "https://eyeguardml.blob.core.windows.net/model/datacamp_model.h5?sp=ra&st=2023-10-30T14:38:12Z&se=2023-11-04T22:38:12Z&sv=2022-11-02&sr=b&sig=D58asX3FDwNNVRSWLoo7DLlH9kQFRpoD8L7JJEZN598%3D"
     load_model_from_url(model_url)
     model = keras.models.load_model("model.h5")
     image = processing(data)
