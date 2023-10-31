@@ -30,6 +30,7 @@ export default {
         },
         async analyzeImage() {
             this.isLoading = true; 
+            this.result = null; 
             const formData = new FormData();
             formData.append('image', this.image);
             try {
